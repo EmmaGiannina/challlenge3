@@ -1,4 +1,5 @@
 # challlenge3
+https://emmagiannina.github.io/challlenge3/.
 
 Bij het maken van deze opdracht wilde ik de gebruiker een duidelijke en eenvoudige plek bieden waar ze gerust hun besteming konden uitzieken. geen extra cerwarrende dingentjes. Eerst ben ik na gagaan wat ik zelf belangerijk zou vinden als het lag aan het landen de drie dingen:
 1, de temeratuur 
