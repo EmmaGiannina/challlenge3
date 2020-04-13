@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title></title>
+
+  <link rel="stylesheet" href="index.css" type="text/css">
+
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js" defer></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="container">
+    <section class="colom1">
+      <header>
+        <h1>
+          Zoek hier jou ideale landing bestemming
+        </h1>
+        <!-- <h2>
+            en ondek de beste plekken
+          </h2> -->
+      </header>
+      <!-- eerste gedeelte waar gebruiker het weer en info kunnen zoeken -->
+      <div class="searchbox">
+        <div class="header-weer">
+          <input type="text" id="cityName" class="weer-input" placeholder="Plaatsnaam...">
+          <a href="#" id="button" onclick="getAPIdata()">zoek</a>
+        </div>
+        <!-- de info die opgeoekt word -->
+        <div class="weerboxen">
+          <div class="weer-box">
+            <h2>Temperatuur:</h2>
+            <div contenteditable="false" data-placeholder="..." class="weerinfo placeholder" id="temperatuur"></div>
+          </div>
+
+          <div class="weer-box">
+            <h2>Gev. temperatuur:</h2>
+            <div contenteditable="false" data-placeholder="..." class="weerinfo placeholder" id="gev-temperatuur"></div>
+          </div>
+
+          <div class="weer-box">
+            <h2>Windsnelheid:</h2>
+            <div contenteditable="false" data-placeholder="..." class="weerinfo placeholder" id="windsnelheid"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- waar de map zich bevind -->
+    <section class="colom2">
+      <div id='map'></div>
+      <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+      <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css" />
+    </section>
+  </section>
+</body>
+<script type="text/javascript" src="index.js"></script>
+
+</html>

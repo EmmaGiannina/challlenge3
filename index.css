@@ -1,0 +1,264 @@
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: arial, sans-serif;
+}
+
+#map{
+  height: 100%;
+  width: 100%;
+
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  "colom1"
+  "colom2"
+  ;
+}
+
+  h1 {
+    font-size:2rem;
+    color: #EBCC75;
+    margin: 11 auto;
+    text-align: left;
+    /* letter-spacing: 1px; */
+    font-weight: 200px;
+    margin-left: 20px;
+  }
+  h2 {
+    align-self: center;
+    font-size: 1.5rem;
+    color: #000;
+    font-family: arial, sans-serif;
+  }
+  #temperatuur, #gev-temperatuur, #windsnelheid {
+    align-self: center;
+    font-size: 1.5rem;
+    color: #000;
+  }
+  .placeholder:empty:not(:focus):before {
+  content: attr(data-placeholder);
+  color: #ccc;
+}
+
+
+.colom1 {
+  grid-area: colom1;
+  background-color: #fff;
+  height: auto;
+  padding-bottom: 50px;
+}
+.colom2 {
+  grid-area: colom2;
+  height: 600px;
+}
+/* de intype balk */
+.weer-input {
+  padding: 5px;
+  width: 60%;
+  max-width: 700px;
+  margin: 0px 10px 30px 20px;
+  border-radius: 5px;
+}
+/* de butten */
+#button {
+  width: 80px;
+  height: 25.1px;
+  background-color: #EBCC75;
+  text-decoration: none;
+  padding: 8px 18px;
+  /* margin-top: 30px; */
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  top: 0px;
+}
+
+#button:hover {
+  background-color: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* boxen waar het weer word weergegeven */
+.weerboxen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0px 20px;
+}
+.weer-box {
+  border-radius: 5px;
+  background-color: #fff;
+  max-width: 100%;
+  height: 100px;
+  margin: 10px 0px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 6px 12px 0px #555;
+
+}
+.weerinfo {
+  align-self: center;
+}
+/* Media voor mobiel */
+@media only screen and (max-width: 767px) {
+  .colom1 {
+    grid-area: colom1;
+    background-color: #fff;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .weerboxen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 20px;
+  }
+  .weer-box {
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 100%;
+    height: 100px;
+    margin: 10px 0px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 6px 12px 0px #555;
+
+  }
+
+}
+/* media voor ipad */
+@media only screen and (min-width: 768px) {
+  .weerboxen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 80px;
+  }
+
+  .weer-input {
+    padding: 5px;
+    width: 60%;
+    max-width: 200px;
+    margin: 10px 10px 30px 80px;
+    border-radius: 5px;
+  }
+
+  h1 {
+    font-size:4rem;
+    margin: 100px 10px 30px 100px;
+    text-align: center;
+    /* letter-spacing: 1px; */
+    font-weight: 200px;
+    margin-left: 20px;
+  }
+}
+ /* Media voor ipad liggen (of medium-klein) */
+@media only screen and (min-width: 1023px) {
+  .weerboxen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 120px;
+  }
+
+  .weer-input {
+    padding: 10px;
+    width: 60%;
+    max-width: 200px;
+    margin: 10px 10px 30px 120px;
+    border-radius: 5px;
+  }
+
+  #button {
+    width: 80px;
+    height: 25.1px;
+    background-color: #EBCC75;
+    text-decoration: none;
+    padding: 12px 22px;
+
+
+  h1 {
+    font-size:4rem;
+    text-align: center;
+    font-weight: 200px;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+}
+
+/* Media voor laptop schrmen */
+@media only screen and (min-width: 1280px) {
+
+  .container {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "colom1 colom2";
+}
+
+  .colom2 {
+    grid-area: colom2;
+    height: 100%;
+    background-color: #EBCC75;
+  }
+
+  h1 {
+    font-size:2rem;
+    text-align: center;
+    font-weight: 200px;
+    margin-left: 120px;
+    margin-right: 120px;
+    text-align: left;
+    margin-top: 50px;
+
+  }
+
+  .mapboxgl-canvas{
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+}
+
+/* @media only screen and (min-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "colom1 colum2"
+    ;
+
+  }
+
+  .colom2 {
+    grid-area: colom2;
+    height: 100%;
+  }
+
+  .weer-box {
+    width: calc(20% - 20px);
+    height: 100px;
+    flex-direction: column;
+  }
+  .weerboxen {
+    flex-direction: row;
+  }
+
+} */
